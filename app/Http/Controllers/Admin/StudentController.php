@@ -52,7 +52,7 @@ class StudentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.student.edit', compact('student'));
     }
 
     /**
@@ -60,7 +60,12 @@ class StudentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'nis' => 'required',
+            'nama_lengkap' => 'required',
+            'jenis_kelamin' => 'required',
+            'nisn' => 'required',
+        ]);
     }
 
     /**

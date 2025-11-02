@@ -1,147 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oh My Cake</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Oh My Cake</title>
+  <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
+  
 </head>
 <body>
-  <!-- Hero Section -->
-  <header id="home" class="hero-section">
-    <nav class="navbar">
-      <div class="logo">Oh My Cake</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="icons">
-        <span class="phone">📞 +123 456 789</span>
-        <span class="search"></span>
-        <span class="love"></span>
-        <span class="bell"></span>
-      </div>
-    </nav>
+  <aside class="sidebar">
+    <h2 class="logo">🍰 Oh My Cake</h2>
+    <ul>
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Customers</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </aside>
 
-    <div class="hero-content">
-      <h1>Taste The Joy</h1>
-      <h2>Handcrafted Sweets for Every Moment</h2>
-      <p>
-        Discover our delightful collection of cakes, cupcakes, and pastries – made with passion,
-        precision, and a whole lot of love. Let us sweeten your day!
-      </p>
-      <button class="cta-btn">Order Now</button>
-      <div class="scroll-down">
-        <a href="#gallery" aria-label="Scroll to Gallery">⬇️</a>
+  <main class="main-content">
+    <header class="topbar">
+      <h1>Welcome, Admin!</h1>
+      <div class="profile">
+        <span>👩‍🍳 Admin</span>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- WHAT WE MAKE -->
-  <section class="products-section" id="products">
-    <h2>What We Make</h2>
-    <h3>Discover our delightful handmade creations</h3>
-    <div class="product-list">
-      <div class="product-item" data-description="A light and fluffy cake bursting with fresh strawberry flavor, topped with creamy frosting and real strawberries. Perfect for any celebration!">
-        <img src="assets/stroberri.png" alt="Strawberry Cake" />
-        <span>Strawberry Cake</span>
+    <section class="cards">
+      <div class="card">
+        <h3>Total Orders</h3>
+        <p>128</p>
       </div>
-      <div class="product-item" data-description="Rich and decadent chocolate tart with a buttery crust, filled with smooth chocolate ganache. A chocolate lover's dream come true.">
-        <img src="assets/Choco.png" alt="Chocolate Tart" />
-        <span>Chocolate Tart</span>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>$1,245</p>
       </div>
-      <div class="product-item" data-description="Exotic matcha-infused delight with layers of green tea sponge and subtle sweetness. Ideal for those seeking a unique and refreshing treat.">
-        <img src="assets/Pandan.png" alt="Matcha Delight" />
-        <span>Matcha Delight</span>
+      <div class="card">
+        <h3>Pending</h3>
+        <p>6</p>
       </div>
-      <div class="product-item" data-description="Tangy lemon cheesecake with a graham cracker base, creamy filling, and zesty lemon topping. A refreshing dessert for sunny days.">
-        <img src="assets/Tart.png" alt="Lemon Cheesecake" />
-        <span>Lemon Cheesecake</span>
+      <div class="card">
+        <h3>Customers</h3>
+        <p>93</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="why-section">
-    <h2>Why Choose Us</h2>
-    <h3>Because every dessert we make is crafted with love, quality, and joy to sweeten your moments</h3>
-    <div class="why-features">
-      <div class="feature">
-        <div class="icon">🎂</div>
-        <p class="title">Freshly Baked Everyday</p>
-        <p class="desc">We bake our cakes and desserts fresh every single morning to ensure you get the best taste and texture possible.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🍓</div>
-        <p class="title">Natural Ingredients</p>
-        <p class="desc">We carefully select natural and high-quality ingredients, with no preservatives or artificial flavors added.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🚚</div>
-        <p class="title">Fast & Safe Delivery</p>
-        <p class="desc">Your orders are delivered quickly and safely, preserving freshness and ensuring they arrive in perfect condition.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">⭐</div>
-        <p class="title">Customer Satisfaction First</p>
-        <p class="desc">We listen, we care, and we always strive to exceed your expectations in both service and flavor.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="gallery-section" id="gallery">
-    <h2>Our Gallery</h2>
-    <h3>A sweet glimpse into our delightful creations</h3>
-    <div class="gallery-scroll">
-      <div class="gallery-item"><img src="assets/gallery1.jpg" alt="Gallery Item 1"></div>
-      <div class="gallery-item"><img src="assets/gallery2.jpg" alt="Gallery Item 2"></div>
-      <div class="gallery-item"><img src="assets/gallery3.jpg" alt="Gallery Item 3"></div>
-      <div class="gallery-item"><img src="assets/gallery4.jpg" alt="Gallery Item 4"></div>
-      <div class="gallery-item"><img src="assets/gallery4.jpg" alt="Gallery Item 4"></div>
-      <div class="gallery-item"><img src="assets/gallery4.jpg" alt="Gallery Item 4"></div>
-      <div class="gallery-item"><img src="assets/gallery4.jpg" alt="Gallery Item 4"></div>
-    </div>
-  </section>
-
-  <section class="order-section" id="order">
-    <h2>Order Now</h2>
-    <h3>Fill the form below to place your dessert order via WhatsApp</h3>
-    <form id="order-form" onsubmit="sendToWhatsApp(event)">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="text" id="menu" placeholder="Menu (e.g., Strawberry Shortcake)" required />
-      <input type="number" id="quantity" placeholder="Quantity" required min="1" />
-      <textarea id="note" placeholder="Special request (optional)"></textarea>
-      <button type="submit" class="cta-btn">Send via WhatsApp</button>
-    </form>
-  </section>
-
-  <!-- Delivery Info -->
-  <section class="delivery-section">
-    <h2>Delivery & Payment</h2>
-    <p>Free delivery in the city area for orders over $20.</p>
-    <p>5% discount for online payment (Visa, Mastercard, PayPal)</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Oh My Cake. All rights reserved.</p>
-  </footer>
-
-  <!-- Product Preview Modal -->
-  <div id="product-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-image" src="" alt="">
-      <h3 id="modal-title"></h3>
-      <p id="modal-description"></p>
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="{{ asset('js/script.js') }}"></script>
+    <section class="orders">
+      <h2>Recent Orders</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1021</td>
+            <td>Ani</td>
+            <td>Strawberry Cake</td>
+            <td>2</td>
+            <td><span class="status completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td>#1022</td>
+            <td>Budi</td>
+            <td>Matcha Delight</td>
+            <td>1</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>#1023</td>
+            <td>Citra</td>
+            <td>Chocolate Tart</td>
+            <td>3</td>
+            <td><span class="status cancelled">Cancelled</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 </body>
 </html>
-    
