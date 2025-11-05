@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Student;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $student = Studentz;;all();
+        return view('admin.student.index', compact('student'));
     }
 
     /**
@@ -20,7 +22,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.student.creat');
     }
 
     /**
